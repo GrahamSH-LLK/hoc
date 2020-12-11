@@ -26,6 +26,8 @@ function quiz() {
 ]).then((result) => {
   if (result.value) {
     const answers = JSON.stringify(result.value)
+    console.log(answers)
+	  console.log(answers[1])
     if (answers[0] === '1') {
 	    correct++
     }

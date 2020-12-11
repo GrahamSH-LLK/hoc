@@ -1,8 +1,8 @@
 function quiz() {
   var correct = 0;
   var totalQuestions = 3;
-  alert("Welcome to my trivia game!");
-  alert("Make sure you answer all the questions.");
+  Swal.fire("Welcome to my trivia game!");
+  Swal.fire("Make sure you answer all the questions.");
   Swal.mixin({
     input: "text",
     confirmButtonText: "Next &rarr;",

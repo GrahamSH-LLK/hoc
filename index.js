@@ -1,5 +1,5 @@
 function quiz() {
-	 var score = 0; 
+	 var correct = 0; 
 	 var totalQuestions = 3;
     alert("Welcome to my trivia game!");
     alert("Make sure you answer all the questions.");
@@ -26,11 +26,19 @@ function quiz() {
 ]).then((result) => {
   if (result.value) {
     const answers = JSON.stringify(result.value)
+    if (answers[0] === '1') {
+	    correct++
+    }
+	if (answers[1] === '2') {
+	    correct++
+    }    
+	if (answers[2] === '2.5') {
+	    correct++
+    }
     Swal.fire({
       title: 'All done!',
       html: `
-        Your answers:
-        <pre><code>${answers}</code></pre>
+        You got ${correct} / ${totalQuestions} correct!
       `,
       confirmButtonText: 'Lovely!'
     })
@@ -39,5 +47,4 @@ function quiz() {
 
  
 
-	alert("You got " + score + " questions out of " + totalQuestions + " correct.");  
 }

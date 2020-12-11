@@ -1,8 +1,8 @@
-function quiz() {
+async function quiz() {
   var correct = 0;
   var totalQuestions = 3;
-  Swal.fire("Welcome to my trivia game!");
-  Swal.fire("Make sure you answer all the questions.");
+  await Swal.fire("Welcome to my trivia game!");
+  await Swal.fire("Make sure you answer all the questions.");
   Swal.mixin({
     input: "text",
     confirmButtonText: "Next &rarr;",

@@ -1,33 +1,33 @@
 async function quiz() {
   var correct = 0;
   var totalQuestions = 3;
-  let timerInterval
+  let timerInterval;
   await Swal.fire({
-  title: 'Welcome to my trivia game!',
-  timer: 2000,
-  timerProgressBar: true,
-  willClose: () => {
-    clearInterval(timerInterval)
-  }
-}).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log('I was closed by the timer')
-  }
-})
+    title: "Welcome to my trivia game!",
+    timer: 2000,
+    timerProgressBar: true,
+    willClose: () => {
+      clearInterval(timerInterval);
+    },
+  }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+      console.log("I was closed by the timer");
+    }
+  });
   await Swal.fire({
-  title: 'Make sure you answer all the questions.',
-  timer: 2000,
-  timerProgressBar: true,
-  willClose: () => {
-    clearInterval(timerInterval)
-  }
-}).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log('I was closed by the timer')
-  }
-})
+    title: "Make sure you answer all the questions.",
+    timer: 2000,
+    timerProgressBar: true,
+    willClose: () => {
+      clearInterval(timerInterval);
+    },
+  }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+      console.log("I was closed by the timer");
+    }
+  });
 
   Swal.mixin({
     input: "text",

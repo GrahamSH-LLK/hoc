@@ -28,13 +28,13 @@ function quiz() {
     const answers = JSON.stringify(result.value)
     console.log(answers)
 	  console.log(answers[1])
-    if (answers[0] === '1') {
+    if (result.value[0] === '1') {
 	    correct++
     }
-	if (answers[1] === '2') {
+	if (result.value[1] === '2') {
 	    correct++
     }    
-	if (answers[2] === '2.5') {
+	if (result.value[2] === '2.5') {
 	    correct++
     }
     Swal.fire({
@@ -42,7 +42,7 @@ function quiz() {
       html: `
         You got ${correct} / ${totalQuestions} correct!
       `,
-      confirmButtonText: 'Lovely!'
+      confirmButtonText: 'Ok!'
     })
   }
 })
